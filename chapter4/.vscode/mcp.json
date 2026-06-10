@@ -1,0 +1,24 @@
+{
+	"servers": {
+		"mermaid-mcp": {
+			"url": "https://mcp.mermaid.ai/mcp",
+			"type": "http",
+			"headers": {
+				"Authorization": "91e8a1f9-9cc9-44c8-a702-f86cacb46ba0.68ecbfdce36d3f81b39ea1892a33d51522fd479aa5e4f535721a9481bc1b45d86e61356a894195ebb43be6173fd8aa36871dc6bc19b8b6715cd64b15173858f675951568f13e2da835d97d3ccebec25eec0de5268b1f03d630562431219965a4e736d7bc95d804a82b76dd5fd91e519a4405d50262b04d429a19af64d1f78da652455ad4864e24517d5aec535520a3cfd8dee65b0af8f0d341149fae74552bcb1193963f653a41f8895efc3af1843228963234a69c90fa71a1133e7e13e33097a60714b28c000bcc89eb2c0df9371bd7f990f3d48f7b232a5767763ba9192b5f5248d89a3d8e4c3d9f8cc79f609d080bb0b2073f1b91c54218ffc98f150363d5"
+			},
+        },
+        "microsoft/azure-devops-mcp": {
+			"type": "stdio",
+			"command": "npx",
+			"args": [
+				"-y",
+				"@azure-devops/mcp@latest",
+				"${input:ado_org}",
+				"-d",
+				"${input:ado_domain}"
+			],
+			"gallery": "https://api.mcp.github.com",
+			"version": "1.0.0"
+		},
+    }
+}
